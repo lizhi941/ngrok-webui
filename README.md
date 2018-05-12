@@ -13,12 +13,12 @@ simple webui for ngrok
 - [docker-compose](https://docs.docker.com/compose/install/)
 - [ngrok 1.x](https://github.com/inconshreveable/ngrok)
   - 不需要自己提供，安装脚本会自动下载并编译
-- ubuntu 14.04
-  - 其他系统未做测试，不保证完整可用
+- centos7
+  - 其他系统未做测试，不保证完整可用
 
 ## Run
 ```bash
-git clone --recursive https://github.com/keepwn/ngrok-webui.git my-ngrok
+git clone --recursive https://github.com/lizhi941/ngrok-webui.git my-ngrok
 cd my-ngrok
 ./run.sh
 ```

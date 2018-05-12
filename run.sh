@@ -50,12 +50,12 @@ function _check_requirement_images_()
 {
     # pull docker's images
     echo "will download images, it will take some time depending on your speed" | _color_ yellow
-    echo "->pull docker image: alpine:3.4"
-    docker pull alpine:3.4
-    echo "->pull docker image: keepwn/ngrok-self-hosting"
-    docker pull keepwn/ngrok-self-hosting
-    echo "->pull docker image: keepwn/ngrok-webapi"
-    docker pull keepwn/ngrok-webapi
+    echo "->pull docker image: centos:7"
+    docker pull centos:7
+    echo "->pull docker image: lizhi/ngrok-self-hosting"
+    docker pull lizhi/ngrok-self-hosting
+    echo "->pull docker image: lizhi/ngrok-webapi"
+    docker pull lizhi/ngrok-webapi
     echo "->pull docker image: nginx"
     docker pull nginx
 }
@@ -117,7 +117,7 @@ function _generate_ngrok_bins_()
         -e TUNNEL_PORT=$TUNNEL_PORT \
         -e HTTP_PORT=$HTTP_PORT \
         -e HTTPS_PORT=$HTTPS_PORT \
-        -v $RUNTIME_DIR:/release keepwn/ngrok-self-hosting
+        -v $RUNTIME_DIR:/release lizhi/ngrok-self-hosting
 
     echo "check whether the ngrok-bins has been generated"
     if [ $(_check_ngrok_bins_) ]; then

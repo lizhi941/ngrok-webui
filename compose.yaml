@@ -1,6 +1,6 @@
 ngrok-webapi:
   restart: always
-  image: keepwn/ngrok-webapi
+  image: lizhi/ngrok-webapi
   ports:
     - 5000:5000
   volumes:
